@@ -1,0 +1,12 @@
+package main.java.com.lukyanovich.cloudbox.exception;
+
+public final class DaoException extends RuntimeException {
+
+    public DaoException(Throwable cause) {
+        super(cause);
+    }
+
+    public DaoException(String message, Throwable cause) {
+        super(message, cause);
+    }
+}
