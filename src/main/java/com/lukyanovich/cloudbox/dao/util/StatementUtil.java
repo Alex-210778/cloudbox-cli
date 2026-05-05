@@ -1,4 +1,4 @@
-package main.java.com.lukyanovich.cloudbox.dao.util;
+package com.lukyanovich.cloudbox.dao.util;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

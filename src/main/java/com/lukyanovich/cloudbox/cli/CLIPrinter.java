@@ -1,4 +1,4 @@
-package main.java.com.lukyanovich.cloudbox.cli;
+package com.lukyanovich.cloudbox.cli;
 
 public class CLIPrinter {
 

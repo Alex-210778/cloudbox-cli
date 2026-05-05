@@ -1,13 +1,13 @@
-package main.java.com.lukyanovich.cloudbox.service.impl;
+package com.lukyanovich.cloudbox.service.impl;
 
-import main.java.com.lukyanovich.cloudbox.dao.UserDao;
-import main.java.com.lukyanovich.cloudbox.dao.impl.UserDaoImpl;
-import main.java.com.lukyanovich.cloudbox.dto.UserLoginDto;
-import main.java.com.lukyanovich.cloudbox.exception.UserAlreadyExistsException;
-import main.java.com.lukyanovich.cloudbox.exception.UserNotFoundException;
-import main.java.com.lukyanovich.cloudbox.exception.UserServiceException;
-import main.java.com.lukyanovich.cloudbox.model.User;
-import main.java.com.lukyanovich.cloudbox.service.UserService;
+import com.lukyanovich.cloudbox.dao.UserDao;
+import com.lukyanovich.cloudbox.dao.impl.UserDaoImpl;
+import com.lukyanovich.cloudbox.dto.UserLoginDto;
+import com.lukyanovich.cloudbox.exception.UserAlreadyExistsException;
+import com.lukyanovich.cloudbox.exception.UserNotFoundException;
+import com.lukyanovich.cloudbox.exception.UserServiceException;
+import com.lukyanovich.cloudbox.model.User;
+import com.lukyanovich.cloudbox.service.UserService;
 
 import java.util.List;
 import java.util.Optional;

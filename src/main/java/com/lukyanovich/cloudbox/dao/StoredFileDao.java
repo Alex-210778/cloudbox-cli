@@ -1,6 +1,6 @@
-package main.java.com.lukyanovich.cloudbox.dao;
+package com.lukyanovich.cloudbox.dao;
 
-import main.java.com.lukyanovich.cloudbox.model.StoredFile;
+import com.lukyanovich.cloudbox.model.StoredFile;
 import java.util.List;
 import java.util.Optional;
 

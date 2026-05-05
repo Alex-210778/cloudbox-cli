@@ -19,6 +19,7 @@ data/storage/*
 target/
 
 ### Gradle ###
+lib/
 .gradle/
 build/
 

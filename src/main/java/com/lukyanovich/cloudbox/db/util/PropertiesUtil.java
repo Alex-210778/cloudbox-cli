@@ -1,4 +1,4 @@
-package main.java.com.lukyanovich.cloudbox.db.util;
+package com.lukyanovich.cloudbox.db.util;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -7,7 +7,7 @@ import java.util.Properties;
 public final class PropertiesUtil {
 
     private static final Properties PROPERTIES = new Properties();
-    private static final String APPLICATION_PROPERTIES = "main/resources/application.properties";
+    private static final String APPLICATION_PROPERTIES = "application.properties";
 
     static {
         loadProperties();

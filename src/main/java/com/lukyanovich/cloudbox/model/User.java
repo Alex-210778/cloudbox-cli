@@ -1,4 +1,4 @@
-package main.java.com.lukyanovich.cloudbox.model;
+package com.lukyanovich.cloudbox.model;
 
 public class User {
 

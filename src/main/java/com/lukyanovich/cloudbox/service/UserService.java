@@ -1,7 +1,7 @@
-package main.java.com.lukyanovich.cloudbox.service;
+package com.lukyanovich.cloudbox.service;
 
-import main.java.com.lukyanovich.cloudbox.dto.UserLoginDto;
-import main.java.com.lukyanovich.cloudbox.model.User;
+import com.lukyanovich.cloudbox.dto.UserLoginDto;
+import com.lukyanovich.cloudbox.model.User;
 
 import java.util.List;
 import java.util.Optional;

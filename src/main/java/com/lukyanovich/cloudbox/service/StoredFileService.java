@@ -1,6 +1,6 @@
-package main.java.com.lukyanovich.cloudbox.service;
+package com.lukyanovich.cloudbox.service;
 
-import main.java.com.lukyanovich.cloudbox.model.StoredFile;
+import com.lukyanovich.cloudbox.model.StoredFile;
 
 import java.io.IOException;
 import java.util.List;

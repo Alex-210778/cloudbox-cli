@@ -1,8 +1,8 @@
-package main.java.com.lukyanovich.cloudbox.cli;
+package com.lukyanovich.cloudbox.cli;
 
 import java.util.Scanner;
 
-import static main.java.com.lukyanovich.cloudbox.cli.CLIMessages.*;
+import static com.lukyanovich.cloudbox.cli.CLIMessages.*;
 
 public final class ConsoleHelper {
 

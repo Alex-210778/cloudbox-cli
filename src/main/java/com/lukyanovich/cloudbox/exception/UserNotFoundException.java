@@ -1,4 +1,4 @@
-package main.java.com.lukyanovich.cloudbox.exception;
+package com.lukyanovich.cloudbox.exception;
 
 public class UserNotFoundException extends UserServiceException {
 

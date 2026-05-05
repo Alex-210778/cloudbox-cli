@@ -1,12 +1,12 @@
-package main.java.com.lukyanovich.cloudbox.service.impl;
+package com.lukyanovich.cloudbox.service.impl;
 
-import main.java.com.lukyanovich.cloudbox.dao.StoredFileDao;
-import main.java.com.lukyanovich.cloudbox.dao.impl.StoredFileDaoImpl;
-import main.java.com.lukyanovich.cloudbox.db.util.PropertiesUtil;
-import main.java.com.lukyanovich.cloudbox.exception.StoredFileNotFoundException;
-import main.java.com.lukyanovich.cloudbox.exception.StoredFileServiceException;
-import main.java.com.lukyanovich.cloudbox.model.StoredFile;
-import main.java.com.lukyanovich.cloudbox.service.StoredFileService;
+import com.lukyanovich.cloudbox.dao.StoredFileDao;
+import com.lukyanovich.cloudbox.dao.impl.StoredFileDaoImpl;
+import com.lukyanovich.cloudbox.db.util.PropertiesUtil;
+import com.lukyanovich.cloudbox.exception.StoredFileNotFoundException;
+import com.lukyanovich.cloudbox.exception.StoredFileServiceException;
+import com.lukyanovich.cloudbox.model.StoredFile;
+import com.lukyanovich.cloudbox.service.StoredFileService;
 
 import java.io.IOException;
 import java.nio.file.*;

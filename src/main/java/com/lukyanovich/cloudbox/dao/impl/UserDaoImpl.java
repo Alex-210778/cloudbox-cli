@@ -1,11 +1,11 @@
-package main.java.com.lukyanovich.cloudbox.dao.impl;
+package com.lukyanovich.cloudbox.dao.impl;
 
-import main.java.com.lukyanovich.cloudbox.dao.UserDao;
-import main.java.com.lukyanovich.cloudbox.dao.util.UserSql;
-import main.java.com.lukyanovich.cloudbox.dao.util.StatementUtil;
-import main.java.com.lukyanovich.cloudbox.db.ConnectionPool;
-import main.java.com.lukyanovich.cloudbox.exception.DaoException;
-import main.java.com.lukyanovich.cloudbox.model.User;
+import com.lukyanovich.cloudbox.dao.UserDao;
+import com.lukyanovich.cloudbox.dao.util.UserSql;
+import com.lukyanovich.cloudbox.dao.util.StatementUtil;
+import com.lukyanovich.cloudbox.db.ConnectionPool;
+import com.lukyanovich.cloudbox.exception.DaoException;
+import com.lukyanovich.cloudbox.model.User;
 
 import java.sql.*;
 import java.util.ArrayList;

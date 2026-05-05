@@ -1,4 +1,4 @@
-package main.java.com.lukyanovich.cloudbox.db;
+package com.lukyanovich.cloudbox.db;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -6,7 +6,7 @@ import java.nio.charset.StandardCharsets;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
-import main.java.com.lukyanovich.cloudbox.exception.DaoException;
+import com.lukyanovich.cloudbox.exception.DaoException;
 
 public final class DatabaseInitializer {
 
@@ -17,9 +17,10 @@ public final class DatabaseInitializer {
 
     public static void init() {
         String sqlScript = readInitScript();
-
         try (Connection connection = ConnectionPool.get();
              Statement statement = connection.createStatement()) {
+
+            System.out.println("INIT");
 
             for (String sql : sqlScript.split(";")) {
                 if (!sql.isBlank()) {
@@ -28,6 +29,7 @@ public final class DatabaseInitializer {
             }
 
         } catch (SQLException e) {
+            System.out.println("INIT_EX");
             throw new DaoException("Ошибка при инициализации базы данных", e);
         }
     }

@@ -1,17 +1,17 @@
-package main.java.com.lukyanovich.cloudbox.cli;
+package com.lukyanovich.cloudbox.cli;
 
-import main.java.com.lukyanovich.cloudbox.dto.UserLoginDto;
-import main.java.com.lukyanovich.cloudbox.exception.StoredFileServiceException;
-import main.java.com.lukyanovich.cloudbox.exception.UserServiceException;
-import main.java.com.lukyanovich.cloudbox.model.User;
-import main.java.com.lukyanovich.cloudbox.model.StoredFile;
-import main.java.com.lukyanovich.cloudbox.service.UserService;
-import main.java.com.lukyanovich.cloudbox.service.StoredFileService;
+import com.lukyanovich.cloudbox.dto.UserLoginDto;
+import com.lukyanovich.cloudbox.exception.StoredFileServiceException;
+import com.lukyanovich.cloudbox.exception.UserServiceException;
+import com.lukyanovich.cloudbox.model.User;
+import com.lukyanovich.cloudbox.model.StoredFile;
+import com.lukyanovich.cloudbox.service.UserService;
+import com.lukyanovich.cloudbox.service.StoredFileService;
 
 import java.io.IOException;
 import java.util.*;
 
-import static main.java.com.lukyanovich.cloudbox.cli.CLIMessages.*;
+import static com.lukyanovich.cloudbox.cli.CLIMessages.*;
 
 public class CLIService {
 

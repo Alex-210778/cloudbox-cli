@@ -1,4 +1,4 @@
-package main.java.com.lukyanovich.cloudbox.dao.util;
+package com.lukyanovich.cloudbox.dao.util;
 
 public final class StoredFileSql {
 

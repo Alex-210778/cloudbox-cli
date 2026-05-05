@@ -1,6 +1,6 @@
-package main.java.com.lukyanovich.cloudbox.db;
+package com.lukyanovich.cloudbox.db;
 
-import main.java.com.lukyanovich.cloudbox.db.util.PropertiesUtil;
+import com.lukyanovich.cloudbox.db.util.PropertiesUtil;
 
 import java.lang.reflect.Proxy;
 import java.sql.Connection;
@@ -113,14 +113,17 @@ public final class ConnectionPool {
     private static int getPoolSize() {
         String size = PropertiesUtil.get(POOL_SIZE_KEY);
 
+        System.out.println("db.pool.size = [" + size + "]");
+
+
         if (size == null || size.isBlank()) {
             return DEFAULT_POOL_SIZE;
         }
 
         try {
-            return Integer.parseInt(size);
+            return Integer.parseInt(size.trim());
         } catch (NumberFormatException e) {
-            throw new RuntimeException("Некорректное значение размера пула соединений: " + size, e);
+            throw new RuntimeException("Некорректное значение размера пула соединений: " + POOL_SIZE_KEY + ": " + size, e);
         }
     }
 }

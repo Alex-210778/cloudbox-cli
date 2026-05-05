@@ -1,4 +1,4 @@
-package main.java.com.lukyanovich.cloudbox.dao;
+package com.lukyanovich.cloudbox.dao;
 
 import java.util.List;
 import java.util.Optional;

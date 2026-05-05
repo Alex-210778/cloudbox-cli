@@ -1,4 +1,4 @@
-package main.java.com.lukyanovich.cloudbox.exception;
+package com.lukyanovich.cloudbox.exception;
 
 public final class DaoException extends RuntimeException {
 
