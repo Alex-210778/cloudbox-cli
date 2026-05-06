@@ -15,9 +15,14 @@ import java.util.Optional;
 public class UserServiceImpl implements UserService {
 
     private static final UserService INSTANCE = new UserServiceImpl();
-    private final UserDao userDao = UserDaoImpl.getInstance();
+    private final UserDao userDao;
 
     public UserServiceImpl() {
+        this(UserDaoImpl.getInstance());
+    }
+
+    public UserServiceImpl(UserDao userDao) {
+        this.userDao = userDao;
     }
 
     @Override

@@ -22,12 +22,22 @@ application {
     ]
 }
 
+configurations {
+    mockitoAgent {
+        transitive = false
+    }
+}
+
 dependencies {
     implementation 'org.postgresql:postgresql:42.7.11'
 
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.14.1'
+    testImplementation platform('org.junit:junit-bom:5.14.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
     testImplementation 'org.assertj:assertj-core:3.27.7'
     testImplementation 'org.mockito:mockito-core:5.23.0'
+    mockitoAgent 'org.mockito:mockito-core:5.23.0'
 
     testImplementation 'org.testcontainers:testcontainers:2.0.5'
     testImplementation 'org.testcontainers:testcontainers-junit-jupiter:2.0.5'
@@ -36,6 +46,12 @@ dependencies {
 
 test {
     useJUnitPlatform()
+
+    jvmArgs "-javaagent:${configurations.mockitoAgent.singleFile}"
+
+    systemProperty 'file.encoding', 'UTF-8'
+    systemProperty 'sun.stdout.encoding', 'UTF-8'
+    systemProperty 'sun.stderr.encoding', 'UTF-8'
 }
 
 tasks.withType(JavaCompile).configureEach {
@@ -47,10 +63,4 @@ tasks.withType(JavaExec).configureEach {
     jvmArgs '-Dsun.stdout.encoding=UTF-8'
     jvmArgs '-Dsun.stderr.encoding=UTF-8'
     standardInput = System.in
-}
-
-tasks.withType(Test).configureEach {
-    systemProperty 'file.encoding', 'UTF-8'
-    systemProperty 'sun.stdout.encoding', 'UTF-8'
-    systemProperty 'sun.stderr.encoding', 'UTF-8'
 }
