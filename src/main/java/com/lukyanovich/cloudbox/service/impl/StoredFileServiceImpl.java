@@ -21,12 +21,22 @@ public class StoredFileServiceImpl implements StoredFileService {
 
     private static final String DEFAULT_PATH = "data/storage";
     private static final String PATH_KEY = "storage.path";
+
     private final Path storagePath;
+    private final StoredFileDao storedFileDao;
 
-    private final StoredFileDao storedFileDao = StoredFileDaoImpl.getInstance();
+    public StoredFileServiceImpl() {
+        this(StoredFileDaoImpl.getInstance(), initStoragePath());
+    }
 
-    private StoredFileServiceImpl() {
+    public StoredFileServiceImpl(StoredFileDao storedFileDao) {
+        this.storedFileDao = storedFileDao;
         this.storagePath = initStoragePath();
+    }
+
+    public StoredFileServiceImpl(StoredFileDao storedFileDao, Path storagePath) {
+        this.storedFileDao = storedFileDao;
+        this.storagePath = storagePath;
     }
 
     @Override
@@ -165,7 +175,7 @@ public class StoredFileServiceImpl implements StoredFileService {
         storedFileDao.update(storedFile);
     }
 
-    private Path initStoragePath() {
+    private static Path initStoragePath() {
         String path = PropertiesUtil.get(PATH_KEY);
 
         Path resultPath = path == null || path.isBlank()
